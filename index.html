@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <title>Rob Pulido</title>
-
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
         <h1>Rob Pulido - Web Programming</h1>
@@ -17,11 +17,7 @@
     <!--Navigation Bar-->
     <nav>
         <a href="index.html">Home</a>
-        <a href="assignment-two.html">Week 2 Assignment</a>
-        <a href="#">Week 3 Assignment</a>
-        <a href="#">Week 4 Assignment</a>
-        <a href="#">Week 5 Assignment</a>
-        <a href="#">Week 6 Assignment</a>
+        <a href="assignment-two.html">This Week's Assignment</a>
     </nav>
 
     <!-- Main Content-->
@@ -30,35 +26,61 @@
         <!--Left Side Bar-->
         <div class="left-sidebar">
             <section>
-            <ul>
-            <u>Favorite Websites:</u>
-            <li><a href="#">site1</a></li>
-            <li><a href="#">site2</a></li>
-            <li><a href="#">site3</a></li>
-            </ul></section>
+                <ul>
+                    <u><b>Favorite Websites:</b></u>
+                    <li><a href="https://w3schools.com">W3Schools</a></li>
+                    <li><a href="https://7daystodie.com/">7 Days to Die</a></li>
+                    <li><a href="https://mlb.com">MLB</a></li>
+                </ul>
+            </section>
         </div>
 
         <!--Center Section-->
         <div class="center">
-            
-            <img src="imgs/me-and-son.jpg" alt="Picture of me and son" />
-            <img src="imgs/family-pic.jpg" alt="Picture of me and family"/>
-            <img src="imgs/riding-off.jpg" alt="Picture of me and son riding off" />
 
-            <h2 style="text-align:center"><b><u>About Me</u></b></h2>
-            <p>
-                Hello everyone! My name is Rob P., I’m 37 years old, and I’m from Lancaster California. I’m currently in the Air Force and have been for over 18 years.
-                I joined the military as a Crew Chief and have had the chance to work multiple airframes. On top of working the line as an ADCC and DCC, I have worked CDDAR,
-                Aero-Repair, Wheel & Tire, Quality Assurance, Flight Line Expediter, Section Chief, Production Superintendent, and I am now a Quality Assurance Superintendent.
-            </p>
-            <p>
-                <!--I’ve been married for 9 years and we have an <b>AMAZING</b> five year old son. As you can see from my pictures,--> 
-            </p>
+            <div class="img-container">
+                <img src="imgs/1.jpg" alt="Picture of me and son" />
+                <img src="imgs/2.jpg" alt="Picture of me and family" />
+                <img src="imgs/3.jpg" alt="Picture of me and son riding off" />
+            </div>
+
+            <section class="aboutMeSection">
+
+                <h2 style="text-align:center"><b><u>About Me</u></b></h2>
+                <p>
+                    Hello everyone! My name is Rob P., I’m 37 years old, and I’m from Lancaster California. I’m currently in the Air Force and have been for over 18 years.
+                    I joined the military as a Crew Chief and have had the chance to work multiple airframes. On top of working the line as an ADCC and DCC, I have worked CDDAR,
+                    Aero-Repair, Wheel & Tire, Quality Assurance, Flight Line Expediter, Section Chief, Production Superintendent, and I am now a Quality Assurance Superintendent.
+                </p>
+                <hr />
+                <p>
+                    I began programming as a hobby, stemming from my love for gaming. Before starting my degree plan, I took time to learn C#, Python, XML, JSON, SQL, and a bit of HTML.
+                    Ideally, I’ll take my knowledge gained from a Computer Science degree and focus on shifting from programming supplementary APIs for games to creating my own.
+                    My favorite games are built using the Unity Engine, which uses C#.
+                    However, I recognize that Unreal Engine is where the power is. After finishing my degree, I plan to focus on learning C++ and any other programming language I can.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    Check out my previous attempt at making a website:
+                </h3>
+                <figure>
+
+                    <a href="https://badpanda.online" target="_blank"><img src="imgs/badpanda.png" alt="website logo and link" /></a>
+                    <figcaption>
+                            A wordpress.. website I created to host information for an API I created for the steam game "7 Days to Die".
+                    </figcaption>
+
+                </figure>
+
+            </section>
         </div>
 
         <!--Right Side Bar / Empty, used for spacing when fullscreen-->
         <div class="right-sidebar"></div>
 
     </div>
+
+
 </body>
 </html>

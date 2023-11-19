@@ -3,84 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three-Column Layout with Header and Navbar</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            font-family: Arial, sans-serif;
+        /* Style for the image container */
+        #image-container {
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #ABB2B9;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .main-container {
-            display: flex;
-            flex: 1;
-        }
-
-        .left {
-            flex: 0 0 15%; /* Set a fixed width of 20% for the left section */
-            background-color: #D5DBDB;
-            padding: 20px;
-        }
-
-        .center {
-            flex: 1; /* Take up remaining space in the center */
-            padding: 20px;
-        }
-
-        .right {
-            flex: 0 0 15%; /* Set a fixed width of 20% for the right section */
-            background-color: #D5DBDB;
-            padding: 20px;
+        /* Style for the images */
+        .slide {
+            display: none;
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Your Website Header</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a> |
-        <a href="#">About</a> |
-        <a href="#">Contact</a>
-    </nav>
-
-    <div class="main-container">
-        <div class="left">
-            <!-- Left navigation links go here -->
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-
-        <div class="center">
-            <!-- Main content goes here -->
-            <h1>Main Content</h1>
-            <p>This is the main content of your webpage.</p>
-        </div>
-
-        <div class="right">
-            <!-- Right sidebar content goes here -->
-            <h2>Right Sidebar</h2>
-            <p>Additional information or widgets can go here.</p>
-        </div>
+    <div id="image-container">
+        <!-- Images to cycle through -->
+        <img src="imgs/1.jpg" alt="Picture of me and son" class="slide"/>
+        <img src="imgs/2.jpg" alt="Picture of me and family" class="slide"/>
+        <img src="imgs/3.jpg" alt="Picture of me and son riding off" class="slide"/>
+        <!-- Add more images as needed -->
     </div>
+    <div>
+        Hello
+    </div>
+
+    <script>
+    // JavaScript for image cycling
+    var currentSlide = 0;
+    var slides = document.getElementsByClassName("slide");
+
+    function showNextSlide() {
+        // Hide the current slide
+        slides[currentSlide].style.display = "none";
+
+        // Move to the next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        // Show the next slide
+        slides[currentSlide].style.display = "block";
+
+        // Call the function again after a delay (e.g., 3000 milliseconds or 3 seconds)
+        setTimeout(showNextSlide, 3000);
+    }
+
+    // Start the image cycling
+    showNextSlide();
+    </script>
 
 </body>
 </html>
