@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Column Layout with Header and Navbar</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ABB2B9;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+
+        .left {
+            flex: 0 0 15%; /* Set a fixed width of 20% for the left section */
+            background-color: #D5DBDB;
+            padding: 20px;
+        }
+
+        .center {
+            flex: 1; /* Take up remaining space in the center */
+            padding: 20px;
+        }
+
+        .right {
+            flex: 0 0 15%; /* Set a fixed width of 20% for the right section */
+            background-color: #D5DBDB;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Website Header</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="main-container">
+        <div class="left">
+            <!-- Left navigation links go here -->
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+
+        <div class="center">
+            <!-- Main content goes here -->
+            <h1>Main Content</h1>
+            <p>This is the main content of your webpage.</p>
+        </div>
+
+        <div class="right">
+            <!-- Right sidebar content goes here -->
+            <h2>Right Sidebar</h2>
+            <p>Additional information or widgets can go here.</p>
+        </div>
+    </div>
+
+</body>
+</html>

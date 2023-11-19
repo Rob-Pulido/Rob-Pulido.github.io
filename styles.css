@@ -1,17 +1,15 @@
 ﻿/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    box-sizing: border-box;
-    align-items: stretch;
-    flex-wrap: wrap;
-    
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background-color:lightgray;
 }
 
 header {
-    border-radius: 25px 25px 0px 0px;
+   /* border-radius: 25px 25px 0px 0px;*/
     background-color: #333;
-    padding: 5px;
+    padding-top: 5px;
     color: white;
     text-align: center;
 }
@@ -22,43 +20,51 @@ nav {
     top: 0;
     justify-content: space-around;
     background-color: #555;
-    padding: 10px;
+    /*padding: 5px 5px;*/
 }
 
     nav a {
         color: white;
-        text-decoration: none;
-        padding: 8px 16px;
-        border-radius: 4px;
+        /*text-decoration: none;*/
+        padding: 5px;
     }
 
-
-
-/*.left {
-    flex: 1;
+.main-container {
     display: flex;
-    background-color: lightblue;
-    align-content: flex-start;
-    width: 20%;
-    box-sizing: border-box;
+    flex: 1;
+}
+
+.main-container {
+    flex: 1; 
+    padding: 20px;
+}
+
+.left-sidebar {
+    flex: 0 0 15%;
+    padding: 20px;
+}
+
+.right-sidebar {
+    flex: 0 0 15%; 
+    padding: 20px;
 }
 
 .center {
-    display: flex;
     flex: 1;
-    background-color: lightgreen;
-    width: 60%;
+    padding: 20px;
+}
+
+img {
+    flex: 1;
+    max-width: 25%;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
     box-sizing: border-box;
 }
 
-.right {
-    display: flex;
-    flex: 1;
-    background-color: lightcoral;
-    align-content: flex-end;
-    width: 20%;
-    box-sizing: border-box;
-}*/
 
 @media screen and (max-width: 600px) {
     header{
@@ -76,17 +82,30 @@ nav {
 
     }
 
-    .left, .right {
-        min-width: 100%; /* Full width on smaller screens */
+    .main-container {
+        flex: 1;
+        flex-direction:column;
+    }
+
+
+
+    .right-sidebar{
+        display: none;
     }
 
     .center {
         order: -1; /* Move center to the top on smaller screens */
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        flex-direction: column;
     }
 }
 
-@media screen and (min-width: 601px){
+/*@media screen and (min-width: 601px){
     body{
         margin: 20px;
     }
-}
+}*/
