@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Assignment Two</title>
+    <style>
+        .purchaseSections {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        /*For future assignment to calculate totals*/
+        .results{
+            display: none;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1>Rob Pulido - Web Programming</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="assignment-two.html">Week 2 Assignment</a>
+        <a href="#">Week 3 Assignment</a>
+        <a href="#">Week 4 Assignment</a>
+        <a href="#">Week 5 Assignment</a>
+        <a href="#">Week 6 Assignment</a>
+    </nav>
+    <section name="pageTitle">
+        <h2>Assignment 2</h2>
+    </section>
+    <section id="purchaseForm" class="purchaseSections">
+
+        <form>
+
+            <fieldset>
+
+                <legend><b>Select Purchase:</b></legend>
+
+                <input type="checkbox" id="item1" name="item1" value="item1">
+                <label for="item1">$250.00 ITEM 1</label><br />
+
+                <input type="checkbox" id="item2" name="item2" value="item2">
+                <label for="item2">$150.99 ITEM 2</label><br>
+                <input type="checkbox" id="item3" name="item3" value="item3">
+                <label for="item3">$437.50 ITEM 3</label>
+
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend><b>Personal Information:</b></legend>
+
+                <label for="firstName">First Name:</label><br />
+                <input type="text" id="firstName" name="firstName" /><br />
+                <label for="lastName">Last Name:</label><br />
+                <input type="text" id="lastName" name="lastName" /><br />
+                <label for="streetAddress">Street Address:</label><br />
+                <input type="text" id="streetAddress" name="streetAddress" /><br />
+                <label for="city"></label>City:<br />
+                <input type="text" id="city" name="city" /><br />
+                <label for="state">State:</label><br />
+                <input type="text" id="state" name="state" maxlength="2" /><br />
+                <label for="zipCode">Zip Code:</label><br />
+                <input type="text" id="zipCode" name="zipCode" maxlength="5" /><br />
+
+
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend><b>Shipping:</b></legend>
+                <label for="shippingType">Delivery Method:</label>
+                <select id="shippingType" name="shippingType">
+                    <option id="standard" name="standard">+$0.00 Standard Delivery</option>
+                    <option id="threeDay" name="standard">+$2.99 Three Day Delivery</option>
+                    <option id="nextDay" name="nextDay">+$8.99 Next Day Delivery</option>
+                </select><br />
+                <label for="deliveryInstructions">Delivery Instructions:</label><br />
+                <textarea id="deliveryInstructions" name="deliveryInstructions" rows="5" cols="50" maxlength="150"></textarea>
+            </fieldset>
+
+
+
+        </form>
+    </section>
+    <section id="purchaseResults" class="purchaseSections">
+        <p class="results">
+            <!--For future assignments. Tax & Subtotal info will appear here. Hidden until items are selected.-->
+        </p>
+        <input type="button" onclick="alert('For Future Assignment..')" value="Proceed" />
+    </section>
+</body>
+
+</html>

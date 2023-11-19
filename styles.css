@@ -2,11 +2,14 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    align-items: stretch;
+    flex-wrap: wrap;
+    
 }
 
 header {
+    border-radius: 25px 25px 0px 0px;
     background-color: #333;
     padding: 5px;
     color: white;
@@ -15,6 +18,8 @@ header {
 
 nav {
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-around;
     background-color: #555;
     padding: 10px;
@@ -27,8 +32,41 @@ nav {
         border-radius: 4px;
     }
 
+
+
+/*.left {
+    flex: 1;
+    display: flex;
+    background-color: lightblue;
+    align-content: flex-start;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    flex: 1;
+    background-color: lightgreen;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.right {
+    display: flex;
+    flex: 1;
+    background-color: lightcoral;
+    align-content: flex-end;
+    width: 20%;
+    box-sizing: border-box;
+}*/
+
 @media screen and (max-width: 600px) {
+    header{
+        border-radius: 0px;
+    }
     nav {
+        position: relative;
+        border-radius: 0px;
         flex-direction: column;
         align-items: center;
     }
@@ -36,6 +74,14 @@ nav {
     nav a {
         margin-top: 5px;
 
+    }
+
+    .left, .right {
+        min-width: 100%; /* Full width on smaller screens */
+    }
+
+    .center {
+        order: -1; /* Move center to the top on smaller screens */
     }
 }
 
