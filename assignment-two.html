@@ -24,9 +24,9 @@
         }
     </style>
 
-
 </head>
 <body>
+
     <header>
         <h1>Rob Pulido - Web Programming</h1>
     </header>
@@ -88,9 +88,9 @@
                         <legend><b>Shipping:</b></legend>
                         <label for="shippingType">Delivery Method:</label>
                         <select id="shippingType" name="shippingType">
-                            <option id="standard" name="standard">+$0.00 Standard Delivery</option>
-                            <option id="threeDay" name="standard">+$2.99 Three Day Delivery</option>
-                            <option id="nextDay" name="nextDay">+$8.99 Next Day Delivery</option>
+                            <option>+$0.00 Standard Delivery</option>
+                            <option>+$2.99 Three Day Delivery</option>
+                            <option>+$8.99 Next Day Delivery</option>
                         </select><br />
                         <label for="deliveryInstructions">Delivery Instructions:</label><br />
                         <textarea id="deliveryInstructions" name="deliveryInstructions" rows="5" cols="50" maxlength="150"></textarea>
@@ -98,7 +98,7 @@
 
 
 
-                    <input type="button" id="proceedButton" name="proceedButton" onclick="alert('For Future Assignment..')" value="Proceed" />
+                    <input type="button" id="proceedButton" name="proceedButton" onclick="updateTotal()" value="Proceed" />
                 </form>
             </section>
             <section id="purchaseResults" class="purchaseSections">
@@ -111,6 +111,45 @@
 
         <div class="right-sidebar"></div>
     </div>
+    <script>
+        //var proceedButton = document.getElementById("proceedButton");
+        //proceedButton.addEventListener("click", updateTotal());
+        var itemOne = document.getElementById("item1");
+        var itemTwo = document.getElementById("item2");
+        var itemThree = document.getElementById("item3");
+        var deliveryMethod = document.getElementById("shippingType");
+
+        itemOne.addEventListener("change", updateTotal());
+
+        function updateTotal() {
+            var subtotal = 0;
+            if (itemOne.checked) {
+                subtotal += 250.00;
+            }
+            if (itemTwo.checked) {
+                subtotal += 150.99;
+            }
+            if (itemThree.checked) {
+                subtotal += 437.50;
+            }
+            switch (deliveryMethod.selectedIndex) {
+                case (1):
+                    {
+                        subtotal += 2.99
+                        break;;
+                    }
+                case (2):
+                    {
+                        subtotal += 8.99
+                        break;
+                    }
+                default:
+            }
+            alert("Subtotal: $" + subtotal)
+
+        }
+    </script>
+
 </body>
 
 </html>
