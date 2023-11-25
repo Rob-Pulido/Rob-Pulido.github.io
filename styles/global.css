@@ -1,39 +1,44 @@
 ﻿body {
     display: flex;
     flex-direction: column;
+    padding: 2% 2% 0 2%;
     margin: 0px;
     background-color:lightgray;
 }
 
 header {
-    background-color: #333;
-    padding-top: 5px;
-    color: white;
-    text-align: center;
+    color: rgb(0, 0, 0);
+    text-align: left;
 }
 
 nav {
     display: flex;
     position: sticky;
+    top:auto;
+    padding-right: 2%;
+    
     top: 0;
-    justify-content: center;
-    background-color: #555;
+    justify-content:left;
+    background-color: #000000;
 }
 
     nav a {
         color: white;
         padding: 5px;
+        margin-left: 28px;
+        padding-left: 24px;
+        padding-right: 32px;
+        font-size: 24px;
+        font-family:cursive
     }
 
 .main-container {
     display: flex;
     flex: 1;
+    height: 100vh;
+    position: relative;
 }
 
-.main-container {
-    flex: 1; 
-    padding: 20px;
-}
 
 .left-sidebar {
     flex: 0 0 15%;
