@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/global.css" />
+
     <title>Assignment Two</title>
     <style>
         .purchaseSections {
@@ -30,14 +31,27 @@
 </head>
 <body>
     
-    <header>
-        <h1>Rob Pulido - Web Programming</h1>
-    </header>
+    <!-- Header-->
+    <header class="headerMain">Rob's Reviews</header>
+
+    <!-- Navbar-->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="#">This Week's Assignment</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Games</a>
+                <div class="dropdown-content">
+                    <a href="#">7 Days To Die</a>
+                    <a href="#">Escape From Tarkov</a>
+                    <a href="#">Rust</a>
+                </div>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
-    
+
+    <!-- Main Content-->
     <div class="main-container">
         <div class="left-sidebar"></div>
         

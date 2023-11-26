@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robs Reviews</title>
     <link rel="stylesheet" href="styles/global.css" />
-    <title>Rob Pulido</title>
+    <link rel="stylesheet" href="styles/about.css" />
 </head>
 
 <body>
 
     <!-- Header -->
-    <header>
-        <h1>Rob Pulido - Web Programming</h1>
-    </header>
+    <header class="headerMain">Rob's Reviews</header>
 
-    <!--Navigation Bar-->
+    <!-- Navbar-->
     <nav>
-        <a href="#">Home</a>
-        <a href="assignment-three.html">This Week's Assignment</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="games.html">Games</a>
+                <div class="dropdown-content">
+                    <a href="games/7daystodie.html">7 Days To Die</a>
+                    <a href="games/tarkov.html">Escape From Tarkov</a>
+                    <a href="games/rust.html">Rust</a>
+                </div>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-
     <!-- Main Content-->
     <div class="main-container">
-
-        <!--Left Side Bar-->
-        <div class="left-sidebar">
-            <section>
-                <ul>
-                    <u><b>Favorite Websites:</b></u>
-                    <li><a href="https://w3schools.com">W3Schools</a></li>
-                    <li><a href="https://7daystodie.com/">7 Days to Die</a></li>
-                    <li><a href="https://mlb.com">MLB</a></li>
-                </ul>
-            </section>
-        </div>
 
         <!--Center Section-->
         <div class="center">
@@ -60,6 +58,11 @@
                     However, I recognize that Unreal Engine is where the power is. After finishing my degree, I plan to focus on learning C++ and any other programming language I can.
                 </p>
             </section>
+           
+        </div>
+
+        <!--Right Side Bar / Empty, used for spacing when fullscreen-->
+        <div class="right-sidebar">
             <section>
                 <h3>
                     Check out my previous attempt at making a website:
@@ -76,11 +79,6 @@
             </section>
         </div>
 
-        <!--Right Side Bar / Empty, used for spacing when fullscreen-->
-        <div class="right-sidebar"></div>
-
     </div>
-
-
 </body>
 </html>

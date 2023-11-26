@@ -1,52 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robs Reviews</title>
     <link rel="stylesheet" href="styles/global.css" />
-    <title>Rob Pulido</title>
-
-    <style>
-        .footerDiv {
-            position: fixed;
-            bottom: 0;
-            padding-right: 5%;
-            margin-right: 5%;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/index.css" />
 </head>
 
 <body>
 
     <!-- Header -->
-    <header>
-        <h1>Rob Pulido<br>Web Programming</h1>
-    </header>
+    <header class="headerMain">Rob's Reviews</header>
 
-    <!--Navigation Bar-->
+    <!-- Navbar-->
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Images</a>
-        <a href="#">Videos</a>
-        <a href="#">Multimedia</a>
-        <a href="#">Store</a>
-        <a href="assignment-three.html">This Week's Assignment</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="games.html">Games</a>
+                <div class="dropdown-content">
+                    <a href="games/7daystodie.html">7 Days To Die</a>
+                    <a href="games/tarkov.html">Escape From Tarkov</a>
+                    <a href="games/rust.html">Rust</a>
+                </div>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-    <div class="main-container">
 
-        <section class="left-sidebar"></section>
+    <!-- Main Section-->
+    <div class="mainContainer"> <!-- Contents of this class should flex-->
 
-        <!-- Main Content -->
-        <section class="center">
-            <div><h1 style="text-align: center;">New Layout in work</h1></div>
-        </section>
-        
-        
-        <section class="right-sidebar"></section>
+        <div class="leftContainer">
+            <section id="featuredItems">
+                <div>
+                    <h1>TOP PICK</h1>
+                    <p>
+                        <img src="imgs\7dtdlogo.jpg" alt="7 Days to Die Logo" height="300px" width="auto" />
+                    </p>
+                </div>
+            </section>
+            <section id="pageDescription">
+                <div>
+                    <h1>WHAT WE'RE ABOUT</h1>
+                    <P>
+                    Welcome to Rob's Reviews, your go-to destination for insightful and thorough game reviews.
+                    At Rob's Reviews, we pride ourselves on delivering comprehensive assessments of the latest and most
+                    popular video games across various platforms.
+                    Our dedicated team of gaming enthusiasts, led by Rob himself, dives deep into the world of interactive
+                    entertainment to provide you with honest and detailed evaluations. Whether you're a casual player or a
+                    hardcore gamer, our reviews cover a wide range of genres, offering valuable insights into gameplay
+                    mechanics, graphics, storyline, and overall gaming experience. From blockbuster titles to indie gems,
+                    Rob's Reviews aims to be your trusted source for informed decisions in the dynamic and ever-evolving
+                    landscape of video games. Join us on the adventure of discovering new releases, uncovering hidden gems,
+                    and staying informed about the gaming industry's latest trends. At Rob's Reviews, we believe that every
+                    gaming experience is unique, and our mission is to guide you toward the games that resonate with your
+                    preferences and provide hours of immersive entertainment.
+                </P>
+                </div>
+            </section>
+            <section id="rotatingItems" style="text-align:center">
+                <div>
+                        <h1>FEATURED GAMES</h1>
+                        <p>
+
+                            <img id="7days" src="imgs\7dtdlogo.jpg" alt="7 Days to Die Logo" height="225px" width="225px" />
+                            <img id="tarkov" src="imgs\escapefromtarkovlogo.jpg" alt="7 Days to Die Logo" height="225px" width="225px" />
+                            <img id="rust" src="imgs\rustlogo.jpg" alt="7 Days to Die Logo" height="225px" width="225px" />
+                        </p>
+                </div>
+                
+            </section>
+            <hr>
+        </div>
+        <div class="rightContainer"> <!-- Tie to database to send/retrieve top 3 comments-->
+            <div>
+                <h1>Shout Outs</h1>
+                <table>
+                    <tr>
+                        <td><b>Name:</b></td>
+                        <td><input type="text" id="commentAuthor" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Comment:</b></td>
+                        <td><textarea name="comment" placeholder="Leave me a comment to let me know you stopped by!"></textarea></td>
+                    </tr>
+                </table>
+
+                        <input type="button" id="submitComment" value="Submit" disabled>
+            </div>
+        </div>
+
     </div>
-    <footer class="footerDiv">
-        Footer
+
+
+    <!-- End Main Section-->
+    <footer>
+        <a href="assignment-three.html">This Week's Assignment</a>
     </footer>
 </body>
 
