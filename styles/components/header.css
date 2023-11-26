@@ -1,0 +1,18 @@
+@font-face {
+    src: url(../../fonts/Themilan.ttf);
+    font-family: Themilan;
+}
+
+.headerMain {
+    font-family: Themilan;
+    font-size: 100px;
+    color: black;
+    padding-left: 20px;
+    background-color: rgb(179, 179, 179);
+}
+
+@media screen and (max-width: 1080px) {
+    .headerMain {
+        font-size: 28;
+    }
+}

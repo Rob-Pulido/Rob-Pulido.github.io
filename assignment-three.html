@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+
     <title>Assignment Two</title>
     <style>
         .purchaseSections {
@@ -12,60 +13,77 @@
             flex: 1;
             min-width: 300px;
             margin: 10px;
+            justify-content: center;
         }
-
+/*         
         /*For future assignment to calculate totals*/
         .results {
             display: none;
         }
-
+        
         h2 {
             text-align: center;
         }
-    </style>
+
+
+        </style>
 
 </head>
 <body>
+    
+    <!-- Header-->
+    <header class="headerMain">Rob's Reviews</header>
 
-    <header>
-        <h1>Rob Pulido - Web Programming</h1>
-    </header>
+    <!-- Navbar-->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="assignment-two.html">This Week's Assignment</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Games</a>
+                <div class="dropdown-content">
+                    <a href="#">7 Days To Die</a>
+                    <a href="#">Escape From Tarkov</a>
+                    <a href="#">Rust</a>
+                </div>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
 
+    <!-- Main Content-->
     <div class="main-container">
         <div class="left-sidebar"></div>
-
-
+        
+        
         <div class="center">
             <section name="pageTitle">
-                <h2>Assignment 2</h2>
+                <h2>Assignment 3</h2>
             </section>
-            <section id="purchaseForm" class="purchaseSections" style="justify-content: center">
-
+            <section id="purchaseForm" class="purchaseSections">
+                
                 <form>
-
+                    
                     <fieldset>
-
+                        
                         <legend><b>Select Purchase:</b></legend>
-
+                        <!--Purchaseable Items-->
                         <input type="checkbox" id="item1" name="item1" value="item1">
                         <label for="item1">$250.00 ITEM 1</label><br />
-
+                        
                         <input type="checkbox" id="item2" name="item2" value="item2">
                         <label for="item2">$150.99 ITEM 2</label><br>
+
                         <input type="checkbox" id="item3" name="item3" value="item3">
                         <label for="item3">$437.50 ITEM 3</label>
-
-
+                        
+                        
                     </fieldset>
-
+                    
                     <fieldset>
-
+                        
                         <legend><b>Personal Information:</b></legend>
-
+                        
                         <label for="firstName">First Name:</label><br />
                         <input type="text" id="firstName" name="firstName" /><br />
                         <label for="lastName">Last Name:</label><br />
@@ -78,13 +96,13 @@
                         <input type="text" id="state" name="state" maxlength="2" /><br />
                         <label for="zipCode">Zip Code:</label><br />
                         <input type="text" id="zipCode" name="zipCode" maxlength="5" /><br />
-
-
-
+                        
+                        
+                        
                     </fieldset>
-
+                    
                     <fieldset>
-
+                        
                         <legend><b>Shipping:</b></legend>
                         <label for="shippingType">Delivery Method:</label>
                         <select id="shippingType" name="shippingType">
@@ -93,63 +111,47 @@
                             <option>+$8.99 Next Day Delivery</option>
                         </select><br />
                         <label for="deliveryInstructions">Delivery Instructions:</label><br />
-                        <textarea id="deliveryInstructions" name="deliveryInstructions" rows="5" cols="50" maxlength="150"></textarea>
+                        <textarea id="deliveryInstructions" name="deliveryInstructions" rows="5" cols="50" maxlength="150"></textarea><br>
+                        <input type="button" id="updateCart" name="updateCart" onclick="updateTotal()" value="Update Cart" />
                     </fieldset>
-
-
-
-                    <input type="button" id="proceedButton" name="proceedButton" onclick="updateTotal()" value="Proceed" />
+                    
+                    
                 </form>
             </section>
-            <section id="purchaseResults" class="purchaseSections">
-                <p class="results">
-                    <!--For future assignments. Tax & Subtotal info will appear here. Hidden until items are selected.-->
-                </p>
+
+            
+            <section id="resultsSection" class="purchaseSections">
+                <table>
+                    <tr>
+                        <td> <label for="subTotal">Subtotal: </label> </td>
+                        <td> <input type="text" id="subTotal" value="" size="6" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="discount">Discount: </label></td>
+                        <td> <input type="text" id="discount" value="" size="6" disabled></td>
+                    </tr>
+                    <tr>
+                        <td><label for="taxes">Taxes:</label></td>
+                        <td><input type="text" id="taxes" value="" size="6" disabled></td>
+                    </tr>
+                    <tr>
+                        <td><label for="total">Total:</label></td>
+                        <td><input type="total" id="total" value="" size="6" disabled></td>
+                    </tr>
+                </table>
+                <br>
+                
+            </section>
+            <section id="checkOut" class ="purchaseSections">
+                
+            <input type="button" value="Check Out" onClick="" disabled>
             </section>
         </div>
-
-
+        
+        
         <div class="right-sidebar"></div>
     </div>
-    <script>
-        //var proceedButton = document.getElementById("proceedButton");
-        //proceedButton.addEventListener("click", updateTotal());
-        var itemOne = document.getElementById("item1");
-        var itemTwo = document.getElementById("item2");
-        var itemThree = document.getElementById("item3");
-        var deliveryMethod = document.getElementById("shippingType");
-
-        itemOne.addEventListener("change", updateTotal());
-
-        function updateTotal() {
-            var subtotal = 0;
-            if (itemOne.checked) {
-                subtotal += 250.00;
-            }
-            if (itemTwo.checked) {
-                subtotal += 150.99;
-            }
-            if (itemThree.checked) {
-                subtotal += 437.50;
-            }
-            switch (deliveryMethod.selectedIndex) {
-                case (1):
-                    {
-                        subtotal += 2.99
-                        break;;
-                    }
-                case (2):
-                    {
-                        subtotal += 8.99
-                        break;
-                    }
-                default:
-            }
-            alert("Subtotal: $" + subtotal)
-
-        }
-    </script>
-
+    <script src="js/formProcessing.js"></script>
 </body>
 
 </html>
