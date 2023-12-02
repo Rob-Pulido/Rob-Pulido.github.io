@@ -1,0 +1,33 @@
+        #mainContent {
+            border-width: 10px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #tableOfContents {
+            width: 15%;
+        }
+
+        #content {
+            width: 70%;
+            flex-direction: column;
+        }
+
+        li {
+            text-align:left;
+        }
+
+        /* section {
+            margin: 10px;
+            border: 3px solid black;
+        }
+
+        h1 {
+            background-color: black;
+            color:white;
+            padding: auto;
+            margin: auto;
+            border-radius: 50px;
+        } */
