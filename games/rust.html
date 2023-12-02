@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robs Reviews</title>
     <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/games.css" />
+    <style>
+        
+    </style>
 </head>
 
 <body>
 
     <!-- Header -->
     <header class="headerMain">Rob's Reviews</header>
-
     <!-- Navbar-->
     <nav>
         <ul class="navbar">
@@ -29,12 +33,55 @@
             <li><a href="../contact.html">Contact</a></li>
         </ul>
     </nav>
+    <!-- Main Content-->
     <div id="mainContent">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LGcECozNXEw?si=UPrckjphSKk3Smcm" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <section id="tableOfContents">
+            <p>
+                <h1>Table of Contents:</h1>
+                <ol> 
+                <li><a href="#gameDescription">Game Description</a></li> <!--TODO: SET ANCHORS-->
+                <li>Game Details</li>
+                <li>Game Review</li>
+                <li>Where to Download</li>
+                <li>Video Gallery</li>
+                <li>Image Gallery</li>
+            </ol>
+        </p>
+        </section>
+
+        <div id="content">
+            <span id="gameTrailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LGcECozNXEw?si=UPrckjphSKk3Smcm" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </span>
+            <section id="gameDescription" anchor="gameDescription">
+                <h1>Game Description</h1>
+                <p>
+                    This is where the game description will go.
+                </p>
+            </section>
+            <section id="gameReview">
+                <h1>Game Review</h1>
+                <p>
+                    This is where the game Review will go.
+                </p>
+            </section>
+            <section id="download">
+                <h1>Where to Download</h1>
+                <p>This is where the "where to download" will go.</p>>
+            </section>
+            <section id="videoGallery">
+                <h1>Video Gallery</h1>
+               <p>This is where the video gallery will go.</p>
+            </section>
+            <section id="imageGallery">
+                <h1>Image Gallery</h1>
+                <p>This is where the image gallery will go. </p>
+            </section>
+
+        </div>
     </div>
-
-
 </body>
 
 </html>
+
