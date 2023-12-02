@@ -9,9 +9,9 @@
     color: black;
     padding-left: 20px;
     background-color: rgb(179, 179, 179);
-    background: linear-gradient(rgb(179, 179, 179), rgb(100, 100, 100) )
-    /*TODO
-      Use this for headers */
+    background: linear-gradient(rgb(179, 179, 179), rgb(100, 100, 100) );
+    /*TODO  
+    Use this for headers */
     
 }
 

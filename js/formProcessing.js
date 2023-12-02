@@ -8,47 +8,73 @@ function updateTotal() {
     var taxRate = 0.07;
     var taxes = 0;
     var total = 0;
+    var itemsSelected = 0;
     var itemOne = document.getElementById("item1");
     var itemTwo = document.getElementById("item2");
     var itemThree = document.getElementById("item3");
     var deliveryMethod = document.getElementById("shippingType");
     if (itemOne.checked) {
         subtotal += 250.00;
+        itemsSelected += 1;
     }
     if (itemTwo.checked) {
         subtotal += 150.99;
+        itemsSelected += 1;
     }
     if (itemThree.checked) {
         subtotal += 437.50;
+        itemsSelected += 1;
     }
 
-    
-    
-    if (subtotal != 0)
-    {
+    // if (subtotal == 0) {
+    //     alert("Please select an item before updating cart.");
+    //     return;
+    // }
+    if (itemsSelected == 2) {
+        discount = subtotal * .10;
+    }
+    else if (itemsSelected == 3) {
+        discount = subtotal * .25;
+    }
+    subtotal -= discount;
+    taxes = subtotal * taxRate;
+    total = subtotal + taxes;
+    if (subtotal != 0) {
 
         switch (deliveryMethod.selectedIndex) {
             case (1):
                 {
-                    subtotal += 2.99
+                    total += 2.99
                     break;;
                 }
-                case (2):
-                    {
-                        subtotal += 8.99
-                        break;
-                    }
-                    default:
-                    }
+            case (2):
+                {
+                    total += 8.99
+                    break;
+                }
+            default:
+        }
+    }
+
+    // Calculate discount //
+    resultCell = document.getElementById("discountPercent");
+    if (itemsSelected == 2)
+    {
+
+        resultCell.innerText = "Recieve 10% off!!";
+    }
+    else if (itemsSelected == 3)
+    {
+        resultCell.innerText = "Recieve 25% off!!";
+    }
+    else
+    {
+        resultCell.innerText = "";
     }
     
-        
-    document.getElementById("subTotal").value = USDollar.format(subtotal);
     document.getElementById("discount").value = USDollar.format(discount);
-    taxes = subtotal * taxRate;
+    document.getElementById("subTotal").value = USDollar.format(subtotal);
     document.getElementById("taxes").value = USDollar.format(taxes);
-    total = taxes + subtotal;
-
     document.getElementById("total").value = USDollar.format(total);
 
 }
