@@ -60,6 +60,8 @@
             <section name="pageTitle">
                 <h2>Assignment 3</h2>
             </section>
+            <p style="text-align:center; color:blue">Purchase 2 items and receive a 10% discount!<br>
+            Purchase 3 items and receive a 25% discount!</p>
             <section id="purchaseForm" class="purchaseSections">
                 
                 <form>
@@ -123,12 +125,15 @@
             <section id="resultsSection" class="purchaseSections">
                 <table>
                     <tr>
-                        <td> <label for="subTotal">Subtotal: </label> </td>
-                        <td> <input type="text" id="subTotal" value="" size="6" disabled></td>
+                        <td colspan="2" id="discountPercent" style="color:red; text-align: center;"></td>
                     </tr>
                     <tr>
                         <td> <label for="discount">Discount: </label></td>
                         <td> <input type="text" id="discount" value="" size="6" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="subTotal">Subtotal: </label> </td>
+                        <td> <input type="text" id="subTotal" value="" size="6" disabled></td>
                     </tr>
                     <tr>
                         <td><label for="taxes">Taxes:</label></td>
