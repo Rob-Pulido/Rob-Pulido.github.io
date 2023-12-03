@@ -6,6 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robs Reviews</title>
     <link rel="stylesheet" href="styles/global.css" />
+    <style>
+
+        #gameList {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #gameList div {
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            margin: 20px;
+            text-align: center;
+        }
+
+        #gameList div:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+
+        @media screen and (max-width: 1080px) {
+            #gameList {
+                margin: initial;
+                flex-direction: column;
+            }
+
+            #img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -29,23 +64,23 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-        <table style="max-width: 800px">
-            <tr>
-                <th>7 Days To Die</th>
-                <th>Escape From Tarkov</th>
-            </tr>
-            <tr>
-                <td><a href="games/7daystodie.html">
+    <div id="gameList">
+        <div>
+           <h2>7 Days to Die</h2>
+            <span id="gameSpan"> 
+                <a href="games/7daystodie.html">
                     <img id="7days" src="imgs\7dtdlogo.jpg" height="225px" width="225px" />
-                </a></td>
-                <td>  <a href="games/tarkov.html">
-                 <img id="tarkov" src="imgs\escapefromtarkovlogo.jpg" alt="escape from tarkov logo" height="225px" width="225px" /></td> 
-            </tr>
-
-        </table>
-       
-
-
-</body>
+                </a>
+            </span>
+        </div>
+        <div>
+            <h2>Escape From Tarkov</h2>
+            <spid id="gameSpan">
+                <a href="games/tarkov.html">
+                    <img id="tarkov" src="imgs\escapefromtarkovlogo.jpg" alt="escape from tarkov logo" height="225px" width="225px" />
+                </a>
+            </spid>
+        </div>
+        </div>
+        </body>
 </html>
