@@ -13,8 +13,6 @@ nav {
   transition: background-color 0.3s, color 0.3s;
   top: 0;
   position: sticky;
-
-
 }
 
 nav a {
@@ -78,24 +76,42 @@ ul.navbar .dropdown-content a:hover {
 
 ul.navbar .dropdown-content a:active {
   color: rgb(255, 0, 0);
-
 }
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 800px) {
 
-  nav {
-    width: 100%;
-    text-align: center;
+
+
+  ul.navbar li {
+    float:none;
+    /* justify-content: center; */
   }
 
   nav a {
-    display: list-item;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    float: none;
     font-size: 28px;
     text-align: center;
+    padding:initial;
   }
 
+  nav {
+    font-family: PermanentMarker;
+    background-color: black;
+    border-width: initial;
+    border-width: initial;
+    transition: background-color 0.3s, color 0.3s;
+    top: 0;
+    position: initial;
+  }
+  
+  ul.navbar li.dropdown {
+    display: flex;
+  }
+
+  ul.navbar .dropdown:hover .dropdown-content {
+    display: none;
+  }
 }

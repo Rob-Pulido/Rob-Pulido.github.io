@@ -8,15 +8,12 @@
     font-size: 100px;
     color: black;
     padding-left: 20px;
-    background-color: rgb(179, 179, 179);
-    background: linear-gradient(rgb(179, 179, 179), rgb(100, 100, 100) );
-    /*TODO  
-    Use this for headers */
-    
+    background: linear-gradient(rgb(179, 179, 179), rgb(100, 100, 100) );   
 }
 
-@media screen and (max-width: 769) {
+@media screen and (max-width: 800px) {
     .headerMain {
-        font-size: 28;
+        font-size: 50px;
+        text-align: center;
     }
 }
