@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/games.css" />
-    <style>
-        
-    </style>
+
 </head>
 
 <body>
@@ -36,28 +34,53 @@
     <!-- Main Content-->
     <div id="mainContent">
         <section id="tableOfContents">
-            <p>
-                <h1>Table of Contents:</h1>
-                <ol> 
-                <li><a href="#gameDescription">Game Description</a></li> <!--TODO: SET ANCHORS-->
-                <li>Game Details</li>
-                <li>Game Review</li>
-                <li>Where to Download</li>
-                <li>Video Gallery</li>
-                <li>Image Gallery</li>
-            </ol>
-        </p>
+            <h2>Navigate:</h2>
+            <span>
+                <a href="#gameDescription">Game Description</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#gameReview">Game Review</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#download">Where to Download</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#videoGallery">Gameplay</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#imageGallery">Image Gallery</a><br>
+            </span>
         </section>
 
         <div id="content">
-            <span id="gameTrailer">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8R5t3a2jT4A?si=D7wjiYw70yHSEf0M" title="YouTube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <span id="contentHeader">
+                <h1>Escape From Tarkov</h1>
             </span>
-            <section id="gameDescription" anchor="gameDescription">
+            <span id="gameTrailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8R5t3a2jT4A?si=D7wjiYw70yHSEf0M"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </span>
+            <section id="gameDescription">
                 <h1>Game Description</h1>
-                <p>
-                    This is where the game description will go.
+                <p style="text-align: left; padding: 20px; font-size: 24px;">
+                    Escape from Tarkov is a story-based experience that challenges all comers to escape the city with
+                    their lives. Matches are session-based and inhabited not only by human players but AI-driven Scavs
+                    to fill the world U+2013 ensuring a constant air of danger. Players can join the conflict on their
+                    own or
+                    with a squad of friends, as multiplayer is at once both cooperative and competitive. Any loot you
+                    find in a session you get to keep, provided you make it to one of the extraction zones alive.
+                    However, if you find yourself on the losing end of a gun battle, you’ll lose everything you found
+                    and everything you brought with you.
+                    <!-- 
+                        Reference:
+                        https://unity.com/madewith/escape-from-tarkov
+                    -->
                 </p>
             </section>
             <section id="gameReview">
@@ -68,27 +91,51 @@
             </section>
             <section id="download">
                 <h1>Where to Download</h1>
-                <p>This is where the "where to download" will go.</p>>
+                <p>This is where the "where to download" will go.</p>
             </section>
             <section id="videoGallery">
-                <h1>Video Gallery</h1>
-               <p>This is where the video gallery will go.</p>
+                <h1>Gameplay</h1>
+                <p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MyUQsh0UCZI?si=8FLnWLWXJonWuY9E"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-fhTKcsq5I4?si=tQe95bIEVPxy992B"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </p>
             </section>
             <section id="imageGallery">
                 <h1>Image Gallery</h1>
-                <p>This is where the image gallery will go. </p>
+                <p>
+                    <img id="myImg1" src="..\imgs/etf/eft1.jpg" alt="Escape From Tarkov" width="300px" height="169">
+                    <img id="myImg2" src="..\imgs\etf\eft2.webp" alt="Escape From Tarkov" width="300px" height="169">
+                    <img id="myImg3" src="..\imgs\etf\eft3.jpg" alt="Escape From Tarkov" width="300px" height="169">
+                    <img id="myImg4" src="..\imgs\etf\eft4.avif" alt="Escape From Tarkov" width="300px" height="169">
+                    <img id="myImg5" src="..\imgs\etf\eft5.jpg" alt="Escape From Tarkov" width="300px" height="169">
+                    <img id="myImg6" src="..\imgs\etf\eft6.png" alt="Escape From Tarkov" width="300px" height="169">
+                </p>
+
+                <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <span class="close">&times;</span>
+
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img01">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+
+                <!-- /* Reference: https://www.w3schools.com/howto/howto_css_modal_images.asp */ -->
             </section>
 
         </div>
     </div>
+    <script src="../js/imageGallery.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-

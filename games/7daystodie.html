@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/games.css" />
+
+
 </head>
 
 <body>
@@ -33,30 +35,55 @@
     <!-- Main Content-->
     <div id="mainContent">
         <section id="tableOfContents">
-            <p>
-                <h1>Table of Contents:</h1>
-                <ol> 
-                <li><a href="#gameDescription">Game Description</a></li> <!--TODO: SET ANCHORS-->
-                <li>Game Details</li>
-                <li>Game Review</li>
-                <li>Where to Download</li>
-                <li>Video Gallery</li>
-                <li>Image Gallery</li>
-            </ol>
-        </p>
+            <h2>Navigate:</h2>
+            <span>
+                <a href="#gameDescription">Game Description</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#gameReview">Game Review</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#download">Where to Download</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#videoGallery">Gameplay</a><br>
+            </span>
+            <hr>
+            <span>
+                <a href="#imageGallery">Image Gallery</a><br>
+            </span>
         </section>
 
         <div id="content">
+            <span id="contentHeader">
+                <h1>7 Days To Die </h1>
+            </span>
             <span id="gameTrailer">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/P-rneb_yxUs?si=iYIKChHhaqn70YHR"
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/P-rneb_yxUs?si=iYIKChHhaqn70YHR?autoplay=1&mute=1"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
+
+
             </span>
-            <section id="gameDescription" anchor="gameDescription">
+            <section id="gameDescription">
                 <h1>Game Description</h1>
                 <p>
-                    This is where the game description will go.
+                    This is an open-world adventure game in which players attempt to survive in a zombie-infested
+                    post-apocalyptic world. From a first-person perspective, players must find food, shelter, and
+                    supplies while battling hordes of attacking zombies. Players use axes, machine guns, shotguns,
+                    chainsaws, and sniper rifles to kill zombies. Combat is
+                    highlighted by realistic gunfire, large blood-splatter effects, and cries of pain. Some weapons
+                    allow players to decapitate and/or dismember zombies. The words “f**k,” “sh*t,” and “a*shole” appear
+                    in the game.
+                    <!--
+                        Reference:
+                        https://www.esrb.org/ratings/34421/7-days-to-die/
+                    -->
                 </p>
             </section>
             <section id="gameReview">
@@ -67,19 +94,60 @@
             </section>
             <section id="download">
                 <h1>Where to Download</h1>
-                <p>This is where the "where to download" will go.</p>>
+                <p>
+                    <a href="https://store.steampowered.com/app/251570/7_Days_to_Die/">Download from steam</a>
+                </p>
             </section>
             <section id="videoGallery">
-                <h1>Video Gallery</h1>
-               <p>This is where the video gallery will go.</p>
+                <h1>Gameplay</h1>
+                <p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hki0qBIgPiA?si=L6DNy65vFmAUNc4p"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XcGjmt9xcMY?si=2H9cO86uLql-AbEP"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </p>
             </section>
             <section id="imageGallery">
                 <h1>Image Gallery</h1>
-                <p>This is where the image gallery will go. </p>
+                <p>
+                    <img id="myImg1" src="../imgs/7dtd/7dtd1.jpg" alt="A 7 Days to Die photo" width="300px"
+                        height="169">
+                    <img id="myImg2" src="../imgs/7dtd/7dtd2.jpg" alt="A 7 Days to Die photo" width="300px"
+                        height="169">
+                    <img id="myImg3" src="../imgs/7dtd/7dtd3.jpg" alt="A 7 Days to Die photo" width="300px"
+                        height="169">
+                    <img id="myImg4" src="../imgs/7dtd/7dtd4.jpg" alt="A 7 Days to Die photo" width="300px"
+                        height="169">
+                    <img id="myImg5" src="../imgs/7dtd/7dtd5.jpg" alt="A 7 Days to Die photo" width="300px"
+                        height="169">
+                    <img id="myImg6" src="../imgs/7dtd/7dtd6.jpg" alt="A 7 Days to Die photo" width="300px"
+                        height="169">
+                </p>
+
+
+
+                <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <span class="close">&times;</span>
+
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img01">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+
+                <!-- /* Reference: https://www.w3schools.com/howto/howto_css_modal_images.asp */ -->
             </section>
 
         </div>
     </div>
+    <script src="../js/imageGallery.js"></script>
 </body>
 
 </html>
