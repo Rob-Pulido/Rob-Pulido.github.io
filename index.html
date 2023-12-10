@@ -33,7 +33,7 @@
     </nav>
 
     <!-- Main Section-->
-    <div class="mainContainer"> <!-- Contents of this class should flex-->
+    <div id="mainContainer" class="mainContainer"> <!-- Contents of this class should flex-->
 
         <div class="leftContainer">
             <section id="featuredItems">
@@ -106,12 +106,25 @@
 
     </div>
     <!-- End Main Section-->
-    <footer>
-        <a href="assignment-five.html">This Week's Assignment</a>
+    <footer style="display: float; color:white; font-size: 15px">
+        <span style="float: left; padding-left: 10px;">
+            &#169 2023 Rob's Reviews. All Rights Reserved
+        </span>
+        <span style="float: right; padding-right: 20px">
+            <a href="termsandconditions.html">Terms and Conditions</a>
+            <!-- <a href="assignment-five.html">This Week's Assignment</a> -->
+        </span>
     </footer>
-   
+    <script>
+        var mainContent = document.getElementById('mainContainer');
+        document.addEventListener('DOMContentLoaded', function() {           
+            setTimeout(function() {
+                mainContent.style.opacity = 1;
+            }, 1000); 
+        });
+    </script>
 
-      </script>
+      
 </body>
 
 </html>
