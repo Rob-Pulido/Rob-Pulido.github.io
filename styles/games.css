@@ -176,7 +176,14 @@ body {
 
   @media only screen and (max-width: 800px) {
 
-    
+      /* Table of Contents */
+  #tableOfContents {
+    text-align: left;
+    /* max-height: 400px; */
+    width: 100%
+    /* margin: 15px; */
+  }
+
     #mainContent {
       border-width: initial;
       flex-direction: column;
@@ -198,6 +205,7 @@ body {
 
     #content {
       width: 100%;
+      font-size: 18px;
       display: flex;
       flex-direction: column;
     }
@@ -205,6 +213,11 @@ body {
     iframe {
       width: 100%;
       text-align: center;
+    }
+
+    figure {
+      margin:0px;
+      padding:0px;
     }
 
     #videoGallery iframe {

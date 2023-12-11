@@ -57,9 +57,17 @@ p {
     border-radius: 40px;
 }
 
-input {
-    width: 400px;
+#commentInput{
+    width: 300px;
+    text-align: left;
 }
+
+#authorInput{
+    width: 250px;
+    text-align:left;
+}
+
+
 textarea {
     resize: none;
     width: 400px;
@@ -92,7 +100,17 @@ textarea {
         height: auto;
     }
 
+    
 
+    #commentInput{
+        width: 250px;
+        text-align: left;
+    }
+
+    #authorInput{
+        width: 200px;
+        text-align: left;
+    }
 
 
 }
