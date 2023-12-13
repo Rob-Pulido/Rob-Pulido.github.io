@@ -29,11 +29,21 @@ body {
   }
 
 
+#tableOfContents a {
+  /* text-decoration: none; */
+  color: white;
+  text-decoration:solid;
+  text-shadow: black;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+}
+
 
 
   
   #tableOfContents a:hover {
     font-style: italic;
+    color: black;
   }
   
   #tableOfContents h2 {

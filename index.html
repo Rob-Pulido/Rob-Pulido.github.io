@@ -193,7 +193,7 @@
     function createCommentElement(commentData, timestamp) {
         const commentElement = document.createElement('div');
         const formattedTimestamp = timestamp.toLocaleString();
-        commentElement.innerHTML = `Shout out from <b> ${commentData.author}</b> on ${formattedTimestamp}<hr><i>${commentData.comment}</i><br>`;
+        commentElement.innerHTML = `Shout out from <b>${commentData.author}</b> on ${formattedTimestamp}<hr><i>${commentData.comment}</i><br>`;
         return commentElement;
     }
   </script>
