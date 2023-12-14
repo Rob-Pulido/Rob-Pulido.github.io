@@ -93,15 +93,16 @@
                 <table>
                     <tr>
                         <td><b>Name:</b></td>
-                        <td style="text-align:left; width: 100%"><input type="text" id="authorInput"/></td>
+                        <td style="text-align:left; width: 100%"><input type="text" id="authorInput" maxlength="20"/></td>
                     </tr>
                     <tr>
-                        <td><b>Comment:</b></td>
-                        <td><textarea id="commentInput" name="comment" placeholder="Leave me a comment to let me know you stopped by!"></textarea></td>
+                        <td style="vertical-align: top"><b>Comment:</b></td>
+                        <td><textarea id="commentInput" name="comment" placeholder="Leave me a comment to let me know you stopped by!" maxlength="300"></textarea></td>
                     </tr>
                 </table>
-
-                        <input type="button" id="submitComment" value="Submit" onclick="submitComment()">
+                <div style="text-align:center;">
+                    <input type="button" id="submitComment" value="Submit" onclick="submitComment()">
+                </div>
                         <br>
                         <br>
                         <hr>

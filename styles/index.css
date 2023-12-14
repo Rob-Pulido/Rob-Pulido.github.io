@@ -53,12 +53,13 @@ p {
     padding: 0;
     width: 30%;
     height: auto;
-    text-align:center;
+    text-align:left;
     border-radius: 40px;
 }
 
 #commentInput{
-    width: 300px;
+    width: 100%;
+    
     text-align: left;
 }
 
